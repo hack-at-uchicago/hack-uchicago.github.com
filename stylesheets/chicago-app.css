@@ -10,6 +10,16 @@ html {
   background-color: white; /* Start with a blank slate */
 }
 
+/* Prefer neutral, geometric sans-serif fontfaces */
+body, .sans-serif {
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+}
+
+/* Stick to the standards for serif faces */
+.serif {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 /* The Body */
 body {
   font-size: 1.25em;  /* Boost up the font size a little */
@@ -17,8 +27,17 @@ body {
 }
 
 /* The Wordmark */
-#chicago-app {
-  font-size: 2.5em; /* Let's make this obvious */
+#chicago-app a, #chicago-app a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#chicago-app a:hover  { color: #666; }
+#chicago-app a:active { color: #999; }
+
+#chicago-app h1 {
+  font-size: 2.5em; /* Let's make this thing obvious */
+  line-height: 2em; /* Maintain lots of whitespace */
   font-weight: 800; /* "Extra bold" in Typekit parlance */
 }
 

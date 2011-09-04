@@ -4,18 +4,34 @@
     <title>{{ page.title }}</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--[if lte IE 9]>
       <link rel="stylesheet" href="/stylesheets/ie.css" type="text/css" media="screen" />
     <![endif]-->
     <link href="/stylesheets/1140.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/chicago-app.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
-  <body>
-    <header>
-      <h1 id="chicago-app" class="adelle">Chicago.app</h1>
+
+  <!-- Beware! Using 1140 Grid system with the whole body as the container -->
+  <body class="container">
+    <header class="row">
+      <div id="chicago-app" class="eightcol">
+        <a href="/" title="Chicago.app">
+          <h1 id="chicago-app" class="adelle">Chicago.app</h1>
+        </a>
+      </div>
+      <nav class="fourcol last"><!-- Our only real navigation, site-wide -->
+        <ul>
+          <li><a href="/about.html" title="About">About</a></li>
+          <li><a href="/posts.html" title="Posts">Posts</a></li>
+        </ul>
+      </nav>
     </header>
-    <div id="content">{{ content }}</div>
-    <footer></footer>
+    <div id="content" class="row">
+      {{ content }}
+    </div>
+
+    <!-- For faster reandering, loading JavaScript after content -->
     <script src="http://use.typekit.com/mnr5ksq.js" type="text/javascript"></script>
     <script src="/javascripts/mediaqueries.js" type="text/javascript"></script>
     <script src="/javascripts/head.js" type="text/javascript"></script>
