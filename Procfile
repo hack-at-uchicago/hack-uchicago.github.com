@@ -1,0 +1,1 @@
+server: jekyll --server 3000 --auto
