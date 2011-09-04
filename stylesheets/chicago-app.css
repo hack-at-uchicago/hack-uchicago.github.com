@@ -1,0 +1,29 @@
+/* Chicago.app style
+ * - Responsive layout with 1140 Grid
+ * - Progressive ehancement with Head.js
+ */
+
+/* The Document */
+html {
+  font-size: 12px;         /* Never rely on the defaults! */
+  line-height: 18px;       /* Gives us a good vertical rhythm */
+  background-color: white; /* Start with a blank slate */
+}
+
+/* The Body */
+body {
+  font-size: 1.25em;  /* Boost up the font size a little */
+  line-height: 1.5em; /* Maintain our baseline ratio */
+}
+
+/* The Wordmark */
+#chicago-app {
+  font-size: 2.5em; /* Let's make this obvious */
+  font-weight: 800; /* "Extra bold" in Typekit parlance */
+}
+
+
+/* Take advantage of more screen space on the desktop and some larger devices */
+@media handheld, only screen and (min-width: 768px) {
+  body {}
+}

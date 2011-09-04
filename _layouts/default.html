@@ -9,11 +9,28 @@
     <![endif]-->
     <link href="/stylesheets/1140.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/chicago-app.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="/javascripts/mediaqueries.js" type="text/javascript"></script> <!-- Must load first! -->
-    <script src="/javascripts/head.load.js" type="text/javascript"></script>
-    <script src="/javascripts/chicago-app.js" type="text/javascript"></script>
   </head>
   <body>
-    {{ content }}
+    <header>
+      <h1 id="chicago-app" class="adelle">Chicago.app</h1>
+    </header>
+    <div id="content">{{ content }}</div>
+    <footer></footer>
+    <script src="http://use.typekit.com/mnr5ksq.js" type="text/javascript"></script>
+    <script src="/javascripts/mediaqueries.js" type="text/javascript"></script>
+    <script src="/javascripts/head.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      // Typekit has some loading of its own to do
+      try { Typekit.load(); } catch (e) {}
+
+      // We're using the Head.js library to load a few JavaScript files in parallel
+      head.js(
+        { jquery: '/javascripts/jquery.js' },             // JavaScript at its finest
+        { fancybox: '/javascripts/fancybox.js' },         // Super-slick lightboxes
+        { timeAgo:'/javascripts/timeago.js' },            // Self-updating dates
+        { waypoints: '/javascripts/waypoints.js' },       // Add spacial triggers
+        { chicago_app: '/javascripts/chicago-app.js' }    // Our own special sauce
+      );
+    </script>
   </body>
 </html>

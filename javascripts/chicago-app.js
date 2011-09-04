@@ -1,1 +1,3 @@
-head.js('/javascripts/jquery.js', '/javascripts/fancybox.js', '/javascripts/timeago.js', '/javascripts/waypoints.js');
+head.ready(function() {
+  // All of our JavaScript libraries are loaded! Let's get to work...
+});
