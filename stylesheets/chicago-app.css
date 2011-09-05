@@ -1,4 +1,5 @@
 /*
+ * For reference:
  * blue    #1ab1dd
  * yellow  #ffe236
  * red     #d92525
@@ -7,10 +8,13 @@
  *
  */
 
+
 /* The Document */
 html {
-  font-size: 12px;         /* Never rely on the defaults! */
-  line-height: 18px;       /* Gives us a good vertical rhythm */
+  font-size: 12px;   /* Never rely on the defaults! */
+  line-height: 18px; /* Gives us a good vertical rhythm */
+
+  /* Blue background with subtle dotted texturing */
   background: #1ab1dd url('/images/blue.png');
 }
 
@@ -18,59 +22,85 @@ html {
 li { margin-left: 1.5em; }
 
 /* Prefer neutral, geometric sans-serif fontfaces */
-body, .sans-serif {
-  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-}
+body, .sans-serif { font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }
 
 /* Stick to the standards for serif faces */
-.serif {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
+.serif { font-family: Georgia, 'Times New Roman', Times, serif; }
+
 
 /* The Body */
 body {
-  font-size: 1.25em;  /* Boost up the font size a little */
-  line-height: 1.5em; /* Maintain our baseline ratio */
+  font-size: 1.25em;    /* Boost up the font size a little */
+  margin-bottom: 2.5em; /* Nice to not end so abruptly */
 }
+
+/* Maintain our baseline ratio */
+body, h1, h2, h3, h4, h5, h6, p { line-height: 1.5em; }
+
+/* On smaller devices, headings take up full width */
+h1, h2, h3, h4, h5, h6 { text-align: center; }
+
 
 /* The Wordmark */
 #chicago-app {
-  text-align: center;
-  line-height: 3em; /* Maintain lots of whitespace */
+  text-align: center; /* Front and center, very trustworthy */
+  line-height: 3em;   /* Maintain lots of whitespace */
 }
 
 #chicago-app a {
-  font-size:   1.75em; /* Let's make this thing obvious */
-  font-weight: 800; /* "Extra bold" in Typekit parlance */
-  text-decoration: none;
+  font-size:   1.75em;   /* Let's make this thing obvious */
+  font-weight: 800;      /* "Extra bold" in Typekit parlance */
+  text-decoration: none; /* Underline would look ugly here */
+
+  /* Slick transitions on hover, resize, &c. */
   -webkit-transition-duration: 0.2s;
-  -webkit-transition-property: color;
+  -webkit-transition-property: all;
+
+  /* Chunky yet subtle drop shadow */
   text-shadow: rgba(0, 0, 0, 0.15) 5px 5px 0px;
 }
 
-#chicago-app a, #chicago-app a:visited {
-  color: white;
-  text-decoration: none;
+
+/* Want main link to really pop when interacted with
+ * - Yellow, darker shadow on hover
+ * - Orange, keeps shadow when active
+ */
+#chicago-app a, #chicago-app a:visited { color: #ffe236; }
+
+#chicago-app a:hover  {
+  color: #ff7130;
+  text-shadow: rgba(0, 0, 0, 0.25) 5px 5px 0px;
 }
 
-#chicago-app a:hover  { color: #ffe236; }
-#chicago-app a:active { color: #ff7130; }
+#chicago-app a:active { color: #d92525; }
 
 
-/* Main Content */
-#content {
-  margin-bottom: 1em;
+/* Dropshadow Row Style
+ * - White background with subtle drop shadow
+ * - Use with general article markup style
+ */
+.dropshadow {
   background-color: white;
   -moz-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
+  margin-bottom: 2em;
 }
 
-#content .container { padding: 1em 0.5em; }
+.dropshadow:last-child {
+  margin-bottom: 0;
+}
+
+.dropshadow > header h1 { padding: 0.5em 0; }
+
+.dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em 0; }
+
 
 /* Take advantage of more screen space on the desktop and some larger devices */
 @media handheld, only screen and (min-width: 768px) {
-  #chicago-app { text-align: left; }
-  #content .container { padding: 1em; }
+  #chicago-app a { font-size: 2em; }
+  h1, h2, h3, h4, h5, h6 { text-align: left; }
+  .dropshadow > header h1 { padding: 1em; }
+  .dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em; }
 }
