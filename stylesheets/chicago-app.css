@@ -1,14 +1,21 @@
-/* Chicago.app style
- * - Responsive layout with 1140 Grid
- * - Progressive ehancement with Head.js
+/*
+ * blue    #1ab1dd
+ * yellow  #ffe236
+ * red     #d92525
+ * orange  #ff7130
+ * green   #4cb549
+ *
  */
 
 /* The Document */
 html {
   font-size: 12px;         /* Never rely on the defaults! */
   line-height: 18px;       /* Gives us a good vertical rhythm */
-  background-color: white; /* Start with a blank slate */
+  background: #1ab1dd url('/images/blue.png');
 }
+
+/* Let's reinstantiate some of the styles lost in the CSS reset */
+li { margin-left: 1.5em; }
 
 /* Prefer neutral, geometric sans-serif fontfaces */
 body, .sans-serif {
@@ -27,22 +34,43 @@ body {
 }
 
 /* The Wordmark */
+#chicago-app {
+  text-align: center;
+  line-height: 3em; /* Maintain lots of whitespace */
+}
+
+#chicago-app a {
+  font-size:   1.75em; /* Let's make this thing obvious */
+  font-weight: 800; /* "Extra bold" in Typekit parlance */
+  text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-property: color;
+  text-shadow: rgba(0, 0, 0, 0.15) 5px 5px 0px;
+}
+
 #chicago-app a, #chicago-app a:visited {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
-#chicago-app a:hover  { color: #666; }
-#chicago-app a:active { color: #999; }
+#chicago-app a:hover  { color: #ffe236; }
+#chicago-app a:active { color: #ff7130; }
 
-#chicago-app h1 {
-  font-size: 2.5em; /* Let's make this thing obvious */
-  line-height: 2em; /* Maintain lots of whitespace */
-  font-weight: 800; /* "Extra bold" in Typekit parlance */
+
+/* Main Content */
+#content {
+  margin-bottom: 1em;
+  background-color: white;
+  -moz-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
 }
 
+#content .container { padding: 1em 0.5em; }
 
 /* Take advantage of more screen space on the desktop and some larger devices */
 @media handheld, only screen and (min-width: 768px) {
-  body {}
+  #chicago-app { text-align: left; }
+  #content .container { padding: 1em; }
 }
