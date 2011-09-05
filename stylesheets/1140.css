@@ -43,10 +43,7 @@ img { height: auto; }
 
 /* Mobile */
 @media handheld, only screen and (max-width: 767px) {
-  body {
-    font-size: 16px;
-    -webkit-text-size-adjust: none;
-  }
+  body { -webkit-text-size-adjust: none; }
 
   .row, body, .container {
     width: 100%;
@@ -75,3 +72,17 @@ img { height: auto; }
     padding-right: 18px;
   }
 }
+
+
+/* Fix 1140 Grid on Internet Explorer */
+.ie .onecol    { width:   4.7%; }
+.ie .twocol    { width:  13.2%; }
+.ie .threecol  { width: 22.05%; }
+.ie .fourcol   { width:  30.6%; }
+.ie .fivecol   { width:    39%; }
+.ie .sixcol    { width:    48%; }
+.ie .sevencol  { width: 56.75%; }
+.ie .eightcol  { width:  61.6%; }
+.ie .ninecol   { width: 74.05%; }
+.ie .tencol    { width:    82%; }
+.ie .elevencol { width: 91.35%; }

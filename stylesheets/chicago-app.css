@@ -21,6 +21,11 @@ html {
 /* Let's reinstantiate some of the styles lost in the CSS reset */
 li { margin-left: 1.5em; }
 
+h1 { font-size: 1.75em; }
+h2 { font-size: 1.50em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.00em; }
+
 /* Prefer neutral, geometric sans-serif fontfaces */
 body, .sans-serif { font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }
 
@@ -58,7 +63,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
   -webkit-transition-property: all;
 
   /* Chunky yet subtle drop shadow */
-  text-shadow: rgba(0, 0, 0, 0.15) 5px 5px 0px;
+  text-shadow: rgba(0, 0, 0, 0.15) 0.115em 0.115em 0;
 }
 
 
@@ -70,7 +75,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 #chicago-app a:hover  {
   color: #ff7130;
-  text-shadow: rgba(0, 0, 0, 0.25) 5px 5px 0px;
+  text-shadow: rgba(0, 0, 0, 0.25) 0.115em 0.115em 0;
 }
 
 #chicago-app a:active { color: #d92525; }
@@ -90,15 +95,28 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 .dropshadow + .dropshadow { margin-top: 2em; }
 
-.dropshadow > header h1 { padding: 0.5em 0; }
+.dropshadow > header h1 {
+  font-size: 1.5em;
+  padding: 0.5em 0;
+}
 
 .dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em 0; }
 
 
 /* Take advantage of more screen space on the desktop and some larger devices */
 @media handheld, only screen and (min-width: 768px) {
-  #chicago-app a { font-size: 2em; }
+  /* Make text, shadow a little more pominent */
+  #chicago-app a {
+    font-size: 2em;
+    text-shadow: rgba(0, 0, 0, 0.15) 0.13em 0.13em 0;
+  }
+
   h1, h2, h3, h4, h5, h6 { text-align: left; }
   .dropshadow > header h1 { padding: 1em; }
   .dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em; }
+}
+
+.ie .dropshadow > header h1 {
+  font-size: 1.25em;
+  padding: 0 0.5em;
 }
