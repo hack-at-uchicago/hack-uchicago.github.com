@@ -5,8 +5,12 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://use.typekit.com/mnr5ksq.js" type="text/javascript"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!--[if lt IE 9]>
+      <script src="/javascripts/ie9.js"></script>
+    <![endif]-->
     <!--[if lte IE 9]>
-      <script src="/javascripts/mediaqueries.js" type="text/javascript"></script>
       <link rel="stylesheet" href="/stylesheets/ie.css" type="text/css" media="screen" />
     <![endif]-->
     <link href="/stylesheets/1140.css" media="screen" rel="stylesheet" type="text/css" />
@@ -16,7 +20,7 @@
   <!-- Beware! Using 1140 Grid system with the whole body as the container -->
   <body class="container">
     <header class="row">
-      <h1 id="chicago-app" class="adelle twelvecol">
+      <h1 id="chicago-app" class="adelle">
         <a href="/" title="Chicago.app">Chicago.app</a>
       </h1>
     </header>
@@ -24,14 +28,9 @@
     <!-- Where the magic happens -->
     {{ content }}
 
-    <!-- For faster rendering, loading JavaScript after content -->
-    <script src="http://use.typekit.com/mnr5ksq.js" type="text/javascript"></script>
+    <!-- For faster rendering, loading JavaScripts in parallel after content -->
     <script src="/javascripts/head.load.js" type="text/javascript"></script>
     <script type="text/javascript">
-      // Typekit has some loading of its own to do
-      try { Typekit.load(); } catch (e) {}
-
-      // We're using the Head.js library to load a few JavaScript files in parallel
       head.js(
         { jquery: '/javascripts/jquery.js' },          // JavaScript at its finest
         { fancybox: '/javascripts/fancybox.js' },      // Super-slick lightboxes
@@ -40,5 +39,8 @@
         { chicago_app: '/javascripts/chicago-app.js' } // Our own special sauce
       );
     </script>
+
+    <!-- After the dust settles, we're ready to include @media query support -->
+    <script src="/javascripts/mediaqueries.js" type="text/javascript"></script>
   </body>
 </html>

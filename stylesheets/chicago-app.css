@@ -32,6 +32,7 @@ body, .sans-serif { font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sa
 body {
   font-size: 1.25em;    /* Boost up the font size a little */
   margin-bottom: 2.5em; /* Nice to not end so abruptly */
+  margin-top: 0.5em;    /* Helps offset margins on #content */
 }
 
 /* Maintain our baseline ratio */
@@ -48,7 +49,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 }
 
 #chicago-app a {
-  font-size:   1.75em;   /* Let's make this thing obvious */
+  font-size: 1.5em;      /* Let's make this thing obvious */
   font-weight: 800;      /* "Extra bold" in Typekit parlance */
   text-decoration: none; /* Underline would look ugly here */
 
@@ -81,16 +82,13 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
  */
 .dropshadow {
   background-color: white;
-  -moz-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.2);
-  margin-bottom: 2em;
+  -moz-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
 }
 
-.dropshadow:last-child {
-  margin-bottom: 0;
-}
+.dropshadow + .dropshadow { margin-top: 2em; }
 
 .dropshadow > header h1 { padding: 0.5em 0; }
 
