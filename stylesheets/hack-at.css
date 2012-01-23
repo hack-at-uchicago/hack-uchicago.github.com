@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
  * - Use with general article markup style
  */
 .dropshadow {
+  padding: 0.5em 0;
   background-color: white;
   -moz-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
@@ -96,10 +97,14 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 .dropshadow > header h1 {
   font-size: 1.5em;
-  padding: 0.5em 0;
+  line-height: 1em;
+  padding: 0.5em 0 0;
 }
 
-.dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em 0; }
+.dropshadow > .content p, .dropshadow > .content ul {
+  padding: 0.5em 0;
+  line-height: 1.75em;
+}
 
 
 /* Take advantage of more screen space on the desktop and some larger devices */
@@ -107,7 +112,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
   #hack-at a { font-size: 2em; }
   h1, h2, h3, h4, h5, h6 { text-align: left; }
   .dropshadow > header h1 { padding: 1em; }
-  .dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em; }
+  .dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em 1em; }
 }
 
 .ie .dropshadow > header h1 {
