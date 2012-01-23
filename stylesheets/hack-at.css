@@ -48,37 +48,36 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 
 /* The Wordmark */
-#chicago-app {
-  text-align: center; /* Front and center, very trustworthy */
-  line-height: 3em;   /* Maintain lots of whitespace */
+#hack-at {
+  text-align: center;        /* Front and center, very trustworthy */
+  line-height: 3em;          /* Maintain lots of whitespace */
+  text-transform: lowercase; /* It's nicer this way */
 }
 
-#chicago-app a {
+#hack-at a {
+  color: #ffe236;
   font-size: 1.5em;      /* Let's make this thing obvious */
   font-weight: 800;      /* "Extra bold" in Typekit parlance */
   text-decoration: none; /* Underline would look ugly here */
 
+  /* Chunky yet subtle drop shadow */
+  text-shadow: rgba(0, 0, 0, 0.15) 0.115em 0.115em 0;
+
   /* Slick transitions on hover, resize, &c. */
   -webkit-transition-duration: 0.2s;
   -webkit-transition-property: all;
-
-  /* Chunky yet subtle drop shadow */
-  text-shadow: rgba(0, 0, 0, 0.15) 0.115em 0.115em 0;
 }
 
-
 /* Want main link to really pop when interacted with
- * - Yellow, darker shadow on hover
+ * - White, semi-transparent on hover
  * - Orange, keeps shadow when active
  */
-#chicago-app a, #chicago-app a:visited { color: #ffe236; }
-
-#chicago-app a:hover  {
-  color: #ff7130;
+#hack-at a:hover  {
+  color: rgba(255, 255, 255, 0.85);
   text-shadow: rgba(0, 0, 0, 0.25) 0.115em 0.115em 0;
 }
 
-#chicago-app a:active { color: #d92525; }
+#hack-at a:active { color: #d92525; }
 
 
 /* Dropshadow Row Style
@@ -105,12 +104,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 /* Take advantage of more screen space on the desktop and some larger devices */
 @media handheld, only screen and (min-width: 768px) {
-  /* Make text, shadow a little more pominent */
-  #chicago-app a {
-    font-size: 2em;
-    text-shadow: rgba(0, 0, 0, 0.15) 0.13em 0.13em 0;
-  }
-
+  #hack-at a { font-size: 2em; }
   h1, h2, h3, h4, h5, h6 { text-align: left; }
   .dropshadow > header h1 { padding: 1em; }
   .dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em; }
