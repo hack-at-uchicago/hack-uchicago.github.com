@@ -8,12 +8,11 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <script src="http://use.typekit.com/mnr5ksq.js" type="text/javascript"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <!--[if lte IE 8]>
       <script src="/javascripts/ie7-squish.js" type="text/javascript"></script>
       <script src="/javascripts/ie9.js" type="text/javascript"></script>
     <![endif]-->
+    <link href="http://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/1140.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/hack-at.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
@@ -21,13 +20,17 @@
   <!-- Beware! Using 1140 Grid system with the whole body as the container -->
   <body class="container">
     <header class="row">
-      <h1 id="hack-at" class="adelle">
-        <a href="/" title="Hack@UChicago">Hack@UChicago</a>
+      <h1 id="hack-at" class="vt323 twelvecol last">
+        <a href="/" title="Hack@UChicago"><span id="hack">Hack</span><span id="at">@</span><span id="uchicago">UChicago</span></a>
       </h1>
     </header>
 
     <!-- Where the magic happens -->
     {{ content }}
+
+    <footer class="row">
+      <p id="copyright">&copy; 2012 hack@uchicago</p>
+    </footer>
 
     <!-- For faster rendering, loading JavaScripts in parallel after content -->
     <script src="/javascripts/head.js" type="text/javascript"></script>

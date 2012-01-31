@@ -5,6 +5,8 @@
  * red     #d92525
  * orange  #ff7130
  * green   #4cb549
+ * lime    #5bf300
+ * purple  #ac49b5
  *
  */
 
@@ -13,24 +15,22 @@
 html {
   font-size: 12px;   /* Never rely on the defaults! */
   line-height: 18px; /* Gives us a good vertical rhythm */
-
-  /* Blue background with subtle dotted texturing */
-  background: #1ab1dd url('/images/blue.png');
 }
 
 /* Let's reinstantiate some of the styles lost in the CSS reset */
 li { margin-left: 1.5em; }
-
-h1 { font-size: 1.75em; }
-h2 { font-size: 1.50em; }
-h3 { font-size: 1.25em; }
-h4 { font-size: 1.00em; }
+h1 { font-size:  1.75em; }
+h2 { font-size:  1.50em; }
+h3 { font-size:  1.25em; }
+h4 { font-size:  1.00em; }
 
 /* Prefer neutral, geometric sans-serif fontfaces */
 body, .sans-serif { font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }
 
 /* Stick to the standards for serif faces */
 .serif { font-family: Georgia, 'Times New Roman', Times, serif; }
+
+.vt323 { font-family: 'VT323', Monaco, monospace, courier; }
 
 
 /* The Body */
@@ -55,29 +55,21 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 }
 
 #hack-at a {
-  color: #ffe236;
+  color: #d92525;
   font-size: 1.5em;      /* Let's make this thing obvious */
   font-weight: 800;      /* "Extra bold" in Typekit parlance */
   text-decoration: none; /* Underline would look ugly here */
 
   /* Chunky yet subtle drop shadow */
-  text-shadow: rgba(0, 0, 0, 0.15) 0.115em 0.115em 0;
+  text-shadow: rgba(0, 0, 0, 0.3) 0.04em 0.04em 0;
 
   /* Slick transitions on hover, resize, &c. */
   -webkit-transition-duration: 0.2s;
   -webkit-transition-property: all;
 }
 
-/* Want main link to really pop when interacted with
- * - White, semi-transparent on hover
- * - Orange, keeps shadow when active
- */
-#hack-at a:hover  {
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: rgba(0, 0, 0, 0.25) 0.115em 0.115em 0;
-}
-
-#hack-at a:active { color: #d92525; }
+#hack-at a:hover  { color: #1ab1dd; }
+#hack-at a:active { color: #5bf300; }
 
 
 /* Dropshadow Row Style
@@ -86,14 +78,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
  */
 .dropshadow {
   padding: 0.5em 0;
-  background-color: white;
-  -moz-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
-  -o-box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.25);
 }
-
-.dropshadow + .dropshadow { margin-top: 2em; }
 
 .dropshadow > header h1 {
   font-size: 1.5em;
@@ -109,13 +94,35 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 /* Take advantage of more screen space on the desktop and some larger devices */
 @media handheld, only screen and (min-width: 768px) {
-  #hack-at a { font-size: 2em; }
+  #hack-at a { font-size: 1.75em; }
   h1, h2, h3, h4, h5, h6 { text-align: left; }
-  .dropshadow > header h1 { padding: 1em; }
-  .dropshadow > .content p, .dropshadow > .content ul { padding: 0.5em 1em; }
 }
 
 .ie .dropshadow > header h1 {
   font-size: 1.25em;
   padding: 0 0.5em;
+}
+
+
+sup {line-height: 1em;}
+
+a { color: #d92525; }
+a:hover { color: #1ab1dd; }
+a:active { color: #4cb549; }
+a:visited { color: #ac49b5; }
+
+
+.dropshadow, .row + .row {
+  border-top: 1px solid #ddd;
+}
+
+.dropshadow {
+  margin-top: -1px;
+}
+
+#copyright {
+  color: #aaa;
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 2.5em;
 }
