@@ -1,0 +1,129 @@
+/*
+ * For reference:
+ * blue    #1ab1dd
+ * yellow  #ffe236
+ * red     #d92525
+ * orange  #ff7130
+ * green   #4cb549
+ * lime    #5bf300
+ * purple  #ac49b5
+ *
+ */
+
+
+/* The Document */
+html {
+  font-size: 12px;   /* Never rely on the defaults! */
+  line-height: 18px; /* Gives us a good vertical rhythm */
+  background-color: white;
+}
+
+body {
+  font-size: 1.25em;    /* Boost up the font size a little */
+  margin-bottom: 2.5em; /* Nice to not end so abruptly */
+  margin-top: 0.5em;    /* Helps offset margins on #content */
+}
+
+/* Maintain our baseline ratio */
+body, h1, h2, h3, h4, h5, h6, p { line-height: 1.5em; }
+
+/* On smaller devices, headings take up full width */
+h1, h2, h3, h4, h5, h6 { text-align: center; }
+
+
+/* Let's reinstantiate some of the styles lost in the CSS reset */
+li { margin-left: 1.5em; }
+h1 { font-size:  1.75em; }
+h2 { font-size:  1.50em; }
+h3 { font-size:  1.25em; }
+h4 { font-size:  1.00em; }
+sup {line-height: 1em;}
+
+
+/* Prefer neutral, geometric sans-serif fontfaces */
+body, .sans-serif { font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }
+
+/* Stick to the standards for serif faces */
+.serif { font-family: Georgia, 'Times New Roman', Times, serif; }
+
+/* Break out the fixed-width fonts for special occasions */
+.vt323 { font-family: 'VT323', Monaco, monospace, courier; }
+
+/* Default links */
+a         { color: #d92525; } /* Red */
+a:visited { color: #ac49b5; } /* Purple */
+a:hover   { color: #1ab1dd; } /* Blue */
+a:active  { color: #4cb549; } /* Green */
+
+
+/* The Wordmark */
+#hack-uchicago {
+  text-align: center; /* Front and center, very trustworthy */
+  color: #d92525;     /* Red */
+  font-size: 2.5em;   /* Let's make this thing obvious */
+  line-height: 2em;   /* Maintain lots of whitespace */
+  font-weight: 800;   /* "Extra bold" in Typekit parlance */
+
+  /* Subtle drop shadow */
+  text-shadow: rgba(0, 0, 0, 0.3) 0.04em 0.04em 0;
+}
+
+/* If the wordmark were linked... */
+#hack-uchicago a {
+  text-decoration: none; /* Underline would look ugly here */
+
+  /* Slick transitions on hover, resize, &c. */
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-property: all;
+}
+
+#hack-uchicago a,
+#hack-uchicago a:visited { color: #d92525; } /* Red */
+#hack-uchicago a:hover   { color: #1ab1dd; } /* Blue */
+#hack-uchicago a:active  { color: #5bf300; } /* Green */
+
+
+/* Dropshadow Row Style */
+.dropshadow {
+  padding: 0.5em 0;
+  margin-top: -1px; /* Hides the difference between the row and column borders */
+  padding-top: 1px; /* Get back that pixel we lost */
+}
+
+.dropshadow, .row + .row { border-top: 1px solid #ddd; }
+
+.dropshadow > header h1 {
+  font-size: 1.5em;
+  line-height: 1em;
+  padding: 0.5em 0 0;
+}
+
+.ie .dropshadow > header h1 {
+  font-size: 1.25em;
+  padding: 0 0.5em;
+}
+
+.dropshadow > .content p, .dropshadow > .content ul {
+  padding: 0.5em 0;
+  line-height: 1.75em;
+}
+
+
+/* In the footer */
+#copyright {
+  color: #aaa;
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 2.5em;
+}
+
+
+/* Take advantage of more screen space on the desktop and some larger devices */
+@media handheld, only screen and (min-width: 768px) {
+  #hack-uchicago {
+    font-size: 3em;
+    line-height: 1.5em;
+  }
+
+  h1, h2, h3, h4, h5, h6 { text-align: left; }
+}
