@@ -1,1 +1,1 @@
-Chicago.app
+hack@uchicago
