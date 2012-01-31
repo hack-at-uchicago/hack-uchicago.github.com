@@ -50,15 +50,12 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 /* The Wordmark */
 #hack-at {
   text-align: center;        /* Front and center, very trustworthy */
-  line-height: 3em;          /* Maintain lots of whitespace */
+  
   text-transform: lowercase; /* It's nicer this way */
-}
-
-#hack-at a {
   color: #d92525;
-  font-size: 1.5em;      /* Let's make this thing obvious */
+  font-size: 2.25em;      /* Let's make this thing obvious */
+  line-height: 2.5em;          /* Maintain lots of whitespace */
   font-weight: 800;      /* "Extra bold" in Typekit parlance */
-  text-decoration: none; /* Underline would look ugly here */
 
   /* Chunky yet subtle drop shadow */
   text-shadow: rgba(0, 0, 0, 0.3) 0.04em 0.04em 0;
@@ -66,6 +63,12 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
   /* Slick transitions on hover, resize, &c. */
   -webkit-transition-duration: 0.2s;
   -webkit-transition-property: all;
+}
+
+#hack-at a {
+  text-decoration: none; /* Underline would look ugly here */
+
+
 }
 
 #hack-at a:hover  { color: #1ab1dd; }
@@ -94,7 +97,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 /* Take advantage of more screen space on the desktop and some larger devices */
 @media handheld, only screen and (min-width: 768px) {
-  #hack-at a { font-size: 1.75em; }
+  #hack-at { font-size: 2.75em; }
   h1, h2, h3, h4, h5, h6 { text-align: left; }
 }
 
