@@ -127,3 +127,9 @@ a:active  { color: #4cb549; } /* Green */
 
   h1, h2, h3, h4, h5, h6 { text-align: left; }
 }
+
+
+/* Hackathon page */
+#hackathon-details {
+  margin-top: 0.5em;
+}

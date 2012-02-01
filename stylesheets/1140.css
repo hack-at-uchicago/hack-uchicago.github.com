@@ -15,6 +15,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,addre
   overflow: hidden;
 }
 
+.row .row {
+  max-width: 100%;
+  min-width: 100%;
+}
+
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
   margin-right: 3.8%;
   float: left;
