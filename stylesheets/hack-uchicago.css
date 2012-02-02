@@ -133,3 +133,5 @@ a:active  { color: #4cb549; } /* Green */
 #hackathon-details {
   margin-top: 0.5em;
 }
+
+#hackathon-details h3 { line-height: 2em; }
