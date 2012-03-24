@@ -21,7 +21,7 @@ html {
 body {
   font-size: 1.25em;    /* Boost up the font size a little */
   margin-bottom: 2.5em; /* Nice to not end so abruptly */
-  margin-top: 0.5em;    /* Helps offset margins on #content */
+  margin-top: 1em;    /* Helps offset margins on #content */
 }
 
 /* Maintain our baseline ratio */
@@ -82,6 +82,10 @@ a:active  { color: #4cb549; } /* Green */
 #hack-uchicago a:hover   { color: #1ab1dd; } /* Blue */
 #hack-uchicago a:active  { color: #5bf300; } /* Green */
 
+#hack-message p {
+  margin-top: 0.5em;
+  text-align: center;
+}
 
 /* Dropshadow Row Style */
 .dropshadow {
@@ -92,13 +96,13 @@ a:active  { color: #4cb549; } /* Green */
 
 .dropshadow, .row + .row { border-top: 1px solid #ddd; }
 
-.dropshadow > header h1 {
+.dropshadow h1 {
   font-size: 1.5em;
   line-height: 1em;
   padding: 0.5em 0 0;
 }
 
-.ie .dropshadow > header h1 {
+.ie .dropshadow h1 {
   font-size: 1.25em;
   padding: 0 0.5em;
 }
@@ -135,3 +139,14 @@ a:active  { color: #4cb549; } /* Green */
 }
 
 #hackathon-details h3 { line-height: 2em; }
+
+
+/* Sponsors */
+#sponsors p { text-align: center; }
+#sponsors p.message { text-align: left; }
+
+#mc-embedded-subscribe-form {
+  margin-bottom: 0.5em;
+}
+
+label[for=mce-EMAIL] { display: none; }
